@@ -1,0 +1,51 @@
+<div>
+  <div>
+    <div>
+      <span>
+        <input type="file" #fileInput name="file{{imageItem.savedImgFg}}{{imageItem.id}}"
+               id="file{{imageItem.savedImgFg}}{{imageItem.id}}" class="inputfile" (change)="changeImage($event)"
+               accept="image/*"/>
+        <label for="file{{imageItem.savedImgFg}}{{imageItem.id}}">
+          <strong>{{name}}</strong>
+        </label>
+      </span>
+      <span *ngIf="imageChangedFg">
+        <button class="mb-input-file-cancel" (click)="clickCancelImageChange()">{{cancel}}</button>
+      </span>
+      <span *ngIf="imgUrl && imageItem.savedImgFg">
+        <button class="mb-input-file-cancel" (click)="clickDeleteImage()">{{delete}}</button>
+      </span>
+      <span *ngIf="!imageChangedFg">
+        <div class="mb-input-image-msg-box">{{msg}}</div>
+      </span>
+    </div>
+
+    <div style="margin-bottom: 10px;">
+      <span>
+        コメント
+      </span>
+      <span>
+        <input [(ngModel)]="imageItem.comment" (change)="changeComment()">
+      </span>
+    </div>
+
+    <div *ngIf="imgType == 'clinic'" style="margin-bottom: 10px;">
+      <span>
+        表示順番
+      </span>
+      <span>
+        <input [(ngModel)]="imageItem.order" (change)="changeOrder()">
+      </span>
+    </div>
+
+
+    <div style="height: 200px;">
+      <div *ngIf="imgUrl">
+        <img style="max-width: 200px; max-height: 200px;" [src]="imgUrl">
+      </div>
+      <div *ngIf="imgUrl == ''">
+        {{imgMsg}}
+      </div>
+    </div>
+  </div>
+</div>

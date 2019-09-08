@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+.kdr-container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #bcbcbc;
+}
+
+.kdr-header {
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 1px solid #bcbcbc;
+}
+
+.kdr-content {
+  width: calc(100% - 400px);
+  padding: 20px;
+  margin-bottom: 20px;
+  float: right;
+  border: 1px solid #bcbcbc;
+}
+
+.kdr-sidebar {
+  width: 300px;
+  padding: 20px;
+  margin-bottom: 20px;
+  float: left;
+  border: 1px solid #bcbcbc;
+}
+
+.kdr-footer {
+  clear: both;
+  padding: 20px;
+  border: 1px solid #bcbcbc;
+}
