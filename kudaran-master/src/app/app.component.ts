@@ -1,13 +1,10 @@
-import {Component} from '@angular/core';
-import {setTheme} from 'ngx-bootstrap/utils';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  styleUrls: ['./app.component.scss']
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  constructor() {
-    // import ngx-bootstrap4 Theme
-    setTheme('bs4');
-  }
+  title = 'kudaran-master';
 }
